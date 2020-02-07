@@ -1,5 +1,7 @@
 import java.util.*;
 import java.io.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class InputHelper{
 
@@ -92,5 +94,19 @@ public class InputHelper{
             name = scanInput.next();
         }
         return name;
+    }
+
+    public static String getUsernameFromUser() {
+      Scanner scanInput = new Scanner(System.in);
+       System.out.println("Please enter Username");
+       String userName = scanInput.next();
+       Pattern pattern = Pattern.compile("\\s");
+       pattern.matcher(userName);
+       boolean found = matcher.find();
+       while(found) {
+          System.out.printf("A username cannot contain space \' \'! please try again");
+          userName = scanInput.next();
+       }
+       return userName;
     }
 }
