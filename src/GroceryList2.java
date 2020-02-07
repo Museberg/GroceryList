@@ -29,6 +29,7 @@ public class GroceryList2 {
             System.out.println(list.get(i));
         }
     }
+    
     public void editItem(ArrayList<ItemOrder> list) {
         Scanner console = new Scanner(System.in);
         for(int i = 0; i < list.size(); i++) {
@@ -60,6 +61,7 @@ public class GroceryList2 {
         }
 
     }
+
     public void removeItem(ArrayList<ItemOrder> list) {
         Scanner console = new Scanner(System.in);
         System.out.println("Which item would you like to delete?");

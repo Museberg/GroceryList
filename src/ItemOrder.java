@@ -27,12 +27,7 @@ public class ItemOrder {
         this.name = name;
     }
 
-    /*public ItemOrder(String name, int quantity, double unitPrice) {
-        this.name = name;
-        this.quantity = quantity;
-        this.unitPrice = unitPrice;
-    }*/
-
+    //Methods
     public String getName() {
 
         return name;
@@ -67,7 +62,7 @@ public class ItemOrder {
 
         return quantity * unitPrice;
     }
-
+    //A methods that makes the object print itself.
     public String toString() {
 
         return String.format("%d %-20s %.2f DKK %n", quantity, name, unitPrice);

@@ -11,32 +11,16 @@ import java.util.ArrayList;
 
 public class GroceryExercise {
     public static void main(String [] args) throws FileNotFoundException {
+        ArrayList<Login> listL = new ArrayList<>();
         ArrayList<ItemOrder> listt = new ArrayList<>();
         GroceryList a = new GroceryList();
         //String pattern = "dd-MM-yyyy HH:mm:ss";
         //SimpleDateFormat sdf = new SimpleDateFormat("E dd-MM/yyyy HH:mm:ss");
+        Login test = new Login("Arne", "1234", listL); // Her er nogle defineret bruger
+        Login test2 = new Login("BNent", "2222", listL); // Gælder også her.
         Date date = new Date();
-        ItemOrder o = new ItemOrder("Milk", 1, 3);
-        GroceryList2 listG = new GroceryList2();
-        menuSelectionAL(listt, listG);
-        //menuSelectionA(a, date, o);
-
-
-
-        //System.out.println(list);
-
-       /* new ItemOrder("milk", 2, 10,a);
-        new ItemOrder("l", 2, 10,a);
-        new ItemOrder("milk", 2, 10,a);
-        new ItemOrder("milk", 2, 10,a);
-        new ItemOrder("milk", 2, 10,a);
-        new ItemOrder("milk", 2, 10,a);
-        new ItemOrder("milk", 2, 10,a);
-        new ItemOrder("milk", 2, 10,a);
-        new ItemOrder("milk", 2, 10,a);
-       new ItemOrder("milk", 2, 10,a);
-        System.out.println(a);
-        a.readFromFile();*/
+        ItemOrder o = new ItemOrder("Milk", 1, 3);GroceryList2 listG = new GroceryList2();
+        LoginSelection(listL ,listt, listG);
     }
 
     public static void menuSelectionA(GroceryList list,  Date Time, ItemOrder o) {
@@ -72,11 +56,29 @@ public class GroceryExercise {
         }
     }
 
+    public static void LoginSelection(ArrayList<Login> listL, ArrayList<ItemOrder> listI, GroceryList2 listG) {
+        boolean flag = true;
+        while(flag) {
+            System.out.println("Welcome to GroceryList");
+            System.out.println("Enter 1 - Login \n " +
+                    "Enter 2 - Register account");
+            int choice = InputHelper.getOptionFromUser(1,2);
+                switch(choice) {
+                    case 1:
+                        Login.loginCheck(listL,listI, listG);
+                        break;
+                    case 2:
+                        Login.Register(listL);
+                        break;
+                }
+        }
+
+    }
+
     public static void menuSelectionAL(ArrayList<ItemOrder> listA, GroceryList2 listG) {
         Scanner console = new Scanner(System.in);
         boolean flag = true;
         while(flag) {
-            System.out.println("Welcome to GroceryList");
             System.out.println("Enter 1 - Add item \n" +
                     "Enter 2 - Remove Item \n" +
                     "Enter 3 - Edit Item \n" +

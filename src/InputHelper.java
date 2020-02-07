@@ -105,6 +105,7 @@ public class InputHelper{
        while(found) {
           System.out.printf("A username cannot contain space \' \'! please try again %n");
            userName = scanInput.nextLine();
+           found = matcher.find();
        }
 
        return userName;
