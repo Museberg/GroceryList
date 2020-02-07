@@ -79,9 +79,10 @@ public class GroceryExercise {
             System.out.println("Welcome to GroceryList");
             System.out.println("Enter 1 - Add item \n" +
                     "Enter 2 - Remove Item \n" +
-                    "Enter 3 - Calculate total cost \n" +
-                    "Enter 4 - Print list \n" +
-                    "Enter 5 - Exit program");
+                    "Enter 3 - Edit Item \n" +
+                    "Enter 4 - Calculate total cost \n" +
+                    "Enter 5 - Print list \n" +
+                    "Enter 6 - Exit program");
             int chose = console.nextInt();
                 switch(chose) {
                     case 1:
@@ -91,12 +92,15 @@ public class GroceryExercise {
                         listG.removeItem(listA);
                         break;
                     case 3:
-                        listG.getTotalCost(listA);
+                        listG.editItem(listA);
                         break;
                     case 4:
-                        listG.printList(listA);
+                        listG.getTotalCost(listA);
                         break;
                     case 5:
+                        listG.printList(listA);
+                        break;
+                    case 6:
                         System.out.println("Exiting program ...");
                         flag = false;
                         break;

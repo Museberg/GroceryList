@@ -85,7 +85,7 @@ public class InputHelper{
     public static String getStringFromUser(String title){
         Scanner scanInput = new Scanner(System.in);
 
-        System.out.printf("Please enter the " + title + " of the person%n");
+        System.out.printf("Please enter the item");
         String name = scanInput.next();
         while(name.matches(".*\\d.*")){
             System.out.printf("A " + title + " cannot contain a number! Please try again%n");
