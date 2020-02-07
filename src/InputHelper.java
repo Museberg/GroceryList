@@ -101,7 +101,7 @@ public class InputHelper{
        System.out.println("Please enter Username");
        String userName = scanInput.next();
        Pattern pattern = Pattern.compile("\\s");
-       pattern.matcher(userName);
+       Matcher matcher = pattern.matcher(userName);
        boolean found = matcher.find();
        while(found) {
           System.out.printf("A username cannot contain space \' \'! please try again");
