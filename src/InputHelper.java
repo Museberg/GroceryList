@@ -98,15 +98,15 @@ public class InputHelper{
 
     public static String getUsernameFromUser() {
       Scanner scanInput = new Scanner(System.in);
-       System.out.println("Please enter Username");
-       String userName = scanInput.next();
+       String userName = scanInput.nextLine();
        Pattern pattern = Pattern.compile("\\s");
        Matcher matcher = pattern.matcher(userName);
        boolean found = matcher.find();
        while(found) {
-          System.out.printf("A username cannot contain space \' \'! please try again");
-          userName = scanInput.next();
+          System.out.printf("A username cannot contain space \' \'! please try again %n");
+           userName = scanInput.nextLine();
        }
+
        return userName;
     }
 }
