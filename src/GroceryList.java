@@ -12,7 +12,7 @@ public class GroceryList {
 
 
     //Methods
-    public void addItem(ItemOrder o) {
+    public void createItem() {
         Scanner console = new Scanner(System.in);
         if(index < 10) {
             System.out.println("Enter Item Name:");
@@ -32,6 +32,16 @@ public class GroceryList {
         }
     }
 
+    public void addItem(ItemOrder order) {
+        if(index < 10){
+            list[index] = order;
+            index++;
+        }
+        else{
+            System.out.println("Inventory is filled.");
+        }
+
+    }
     public double getTotalCost() {
         double total = 0.0;
             for(int i = 0; i < index; i++) {

@@ -2,16 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b5e0a704-e889-48e4-a848-d6b476a29e94" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/GroceryList.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/GroceryList.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/GroceryList/production/GroceryList/whatever.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/GroceryLists/Hej.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Login.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GroceryExercise.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GroceryExercise.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GroceryList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GroceryList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GroceryList2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GroceryList2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/InputHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/InputHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ItemOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ItemOrder.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
@@ -31,6 +42,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -73,6 +85,9 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="440" y="166" key="#Notifications" timestamp="1581095150022">
       <screen x="0" y="23" width="1680" height="955" />
@@ -90,26 +105,30 @@
       <screen x="0" y="23" width="1680" height="1000" />
     </state>
     <state x="690" y="430" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.23.1680.1000@0.23.1680.1000" timestamp="1580992096394" />
+    <state x="410" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1581188815186">
+      <screen x="0" y="23" width="1680" height="955" />
+    </state>
+    <state x="410" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.23.1680.955@0.23.1680.955" timestamp="1581188815186" />
     <state x="218" y="103" key="CommitChangelistDialog2" timestamp="1581095136964">
       <screen x="0" y="23" width="1680" height="955" />
     </state>
     <state x="218" y="103" key="CommitChangelistDialog2/0.23.1680.955@0.23.1680.955" timestamp="1581095136964" />
-    <state width="1638" height="256" key="GridCell.Tab.0.bottom" timestamp="1581095073070">
+    <state width="1638" height="256" key="GridCell.Tab.0.bottom" timestamp="1581196680043">
       <screen x="0" y="23" width="1680" height="955" />
     </state>
-    <state width="1638" height="256" key="GridCell.Tab.0.bottom/0.23.1680.955@0.23.1680.955" timestamp="1581095073070" />
-    <state width="1638" height="256" key="GridCell.Tab.0.center" timestamp="1581095073069">
+    <state width="1638" height="256" key="GridCell.Tab.0.bottom/0.23.1680.955@0.23.1680.955" timestamp="1581196680043" />
+    <state width="1638" height="256" key="GridCell.Tab.0.center" timestamp="1581196680043">
       <screen x="0" y="23" width="1680" height="955" />
     </state>
-    <state width="1638" height="256" key="GridCell.Tab.0.center/0.23.1680.955@0.23.1680.955" timestamp="1581095073069" />
-    <state width="1638" height="256" key="GridCell.Tab.0.left" timestamp="1581095073069">
+    <state width="1638" height="256" key="GridCell.Tab.0.center/0.23.1680.955@0.23.1680.955" timestamp="1581196680043" />
+    <state width="1638" height="256" key="GridCell.Tab.0.left" timestamp="1581196680042">
       <screen x="0" y="23" width="1680" height="955" />
     </state>
-    <state width="1638" height="256" key="GridCell.Tab.0.left/0.23.1680.955@0.23.1680.955" timestamp="1581095073068" />
-    <state width="1638" height="256" key="GridCell.Tab.0.right" timestamp="1581095073069">
+    <state width="1638" height="256" key="GridCell.Tab.0.left/0.23.1680.955@0.23.1680.955" timestamp="1581196680042" />
+    <state width="1638" height="256" key="GridCell.Tab.0.right" timestamp="1581196680043">
       <screen x="0" y="23" width="1680" height="955" />
     </state>
-    <state width="1638" height="256" key="GridCell.Tab.0.right/0.23.1680.955@0.23.1680.955" timestamp="1581095073069" />
+    <state width="1638" height="256" key="GridCell.Tab.0.right/0.23.1680.955@0.23.1680.955" timestamp="1581196680043" />
     <state x="349" y="141" key="SettingsEditor" timestamp="1581094995830">
       <screen x="0" y="23" width="1680" height="955" />
     </state>

@@ -82,31 +82,32 @@ public class InputHelper{
       String postal = Integer.toString(getIntFromUser());
    
       return String.format("%s %s %s", street, city, postal);
-    }
+   }
 
     public static String getStringFromUser(String title){
-        Scanner scanInput = new Scanner(System.in);
-
-        System.out.printf("Please enter the item");
-        String name = scanInput.next();
-        while(name.matches(".*\\d.*")){
-            System.out.printf("A " + title + " cannot contain a number! Please try again%n");
-            name = scanInput.next();
-        }
-        return name;
-    }
-
-    public static String getUsernameFromUser() {
       Scanner scanInput = new Scanner(System.in);
-       String userName = scanInput.nextLine();
-       Pattern pattern = Pattern.compile("\\s");
-       Matcher matcher = pattern.matcher(userName);
-       boolean found = matcher.find();
-       while(found) {
-          System.out.printf("A username cannot contain space \' \'! please try again %n");
-           userName = scanInput.nextLine();
-       }
 
-       return userName;
-    }
+      System.out.printf("Please enter the item");
+      String name = scanInput.next();
+      while(name.matches(".*\\d.*")){
+         System.out.printf("A " + title + " cannot contain a number! Please try again%n");
+         name = scanInput.next();
+      }
+      return name;
+   }
+
+   public static String getUsernameFromUser() {
+      Scanner scanInput = new Scanner(System.in);
+      String userName = scanInput.nextLine();
+      Pattern pattern = Pattern.compile("\\s");
+      Matcher matcher = pattern.matcher(userName);
+      boolean found = matcher.find();
+      while(found) {
+         System.out.printf("A username cannot contain whitespace! Please try again %n");
+         userName = scanInput.nextLine();
+         found = matcher.find();
+      }
+
+      return userName;
+   }
 }

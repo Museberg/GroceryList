@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-
 public class ItemOrder {
     //Fields
     private String name;
@@ -8,6 +6,15 @@ public class ItemOrder {
 
     //Constructor
     public ItemOrder(String name, int quantity, double unitPrice, GroceryList list) {
+        this.name = name;
+        this.quantity = quantity;
+        this.unitPrice = unitPrice;
+
+        list.addItem(this);
+
+    }
+
+    public ItemOrder(String name, int quantity, double unitPrice, GroceryList2 list) {
         this.name = name;
         this.quantity = quantity;
         this.unitPrice = unitPrice;
@@ -70,6 +77,6 @@ public class ItemOrder {
 
     public String toString() {
 
-        return String.format("%d %-20s %.2f DKK %n", quantity, name, unitPrice);
+        return String.format("%-3d %-20s %.2f DKK", quantity, name, unitPrice);
     }
 }
