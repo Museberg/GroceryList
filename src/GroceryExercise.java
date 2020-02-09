@@ -1,13 +1,8 @@
 import java.io.FileNotFoundException;
 import java.text.SimpleDateFormat;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.util.Scanner;
-import java.time.LocalTime;
 import java.util.Date;
-import java.time.format.DateTimeFormatter;
-import java.sql.SQLOutput;
-import java.util.ArrayList;
+import java.util.*;
 
 public class GroceryExercise {
     public static void main(String [] args) throws FileNotFoundException {
@@ -21,11 +16,20 @@ public class GroceryExercise {
         Date date = new Date();
         ItemOrder o = new ItemOrder("Milk", 1, 3);GroceryList2 listG = new GroceryList2();
         LoginSelection(listL ,listt, listG);
+
+        Date date = new Date();
+
+        GroceryList arrayGroceryList = new GroceryList();
+        GroceryList2 arrayListGroceryList = new GroceryList2();
+
+        menuSelectionAL(arrayListGroceryList); // Menu using arrayList
+        //menuSelectionA(arrayGroceryList, date, o); // Menu using array
+
     }
 
-    public static void menuSelectionA(GroceryList list,  Date Time, ItemOrder o) {
+    public static void menuSelectionA(GroceryList arrayGroceryList,  Date time) {
         SimpleDateFormat sdf = new SimpleDateFormat("E dd-MM/yyyy HH:mm");
-        System.out.println("\nCurrent LocalTime: " + sdf.format(Time));
+        System.out.println("\nCurrent LocalTime: " + sdf.format(time));
         Scanner console = new Scanner(System.in);
         boolean flag = true;
         while(flag) {
@@ -37,13 +41,13 @@ public class GroceryExercise {
             int chose = console.nextInt();
                 switch(chose) {
                     case 1:
-                        list.addItem(o);
+                        arrayGroceryList.createItem();
                         break;
                     case 2:
-                        list.printList();
+                        arrayGroceryList.printList();
                         break;
                     case 3:
-                        list.getTotalCost();
+                        arrayGroceryList.getTotalCost();
                         break;
                     case 4:
                         System.out.println("Exiting program");
@@ -75,7 +79,7 @@ public class GroceryExercise {
 
     }
 
-    public static void menuSelectionAL(ArrayList<ItemOrder> listA, GroceryList2 listG) {
+    public static void menuSelectionAL(GroceryList2 arrayListGroceryList) throws FileNotFoundException {
         Scanner console = new Scanner(System.in);
         boolean flag = true;
         while(flag) {
@@ -84,25 +88,33 @@ public class GroceryExercise {
                     "Enter 3 - Edit Item \n" +
                     "Enter 4 - Calculate total cost \n" +
                     "Enter 5 - Print list \n" +
-                    "Enter 6 - Exit program");
+                    "Enter 6 - Save grocery list to disk \n" +
+                    "Enter 7 - Load grocery list from disk - overwrites current list \n" +
+                    "Enter 8 - Exit program");
             int chose = console.nextInt();
                 switch(chose) {
-                    case 1:
-                        listG.addItem(listA);
+                    case 1: // User creates new itemOrder
+                        arrayListGroceryList.createItem();
                         break;
-                    case 2:
-                        listG.removeItem(listA);
+                    case 2: // User removes item
+                        arrayListGroceryList.removeItem();
                         break;
-                    case 3:
-                        listG.editItem(listA);
+                    case 3: // User edits item
+                        arrayListGroceryList.editItem();
                         break;
-                    case 4:
-                        listG.getTotalCost(listA);
+                    case 4: // Prints all items and the total cost of them
+                        arrayListGroceryList.getTotalCost();
                         break;
-                    case 5:
-                        listG.printList(listA);
+                    case 5: // Prints a list of all items
+                        arrayListGroceryList.printList();
                         break;
-                    case 6:
+                    case 6: // Saves current grocery list to disk
+                        arrayListGroceryList.saveGroceryList();
+                        break;
+                    case 7: // Loads selected grocery list from disk
+                        arrayListGroceryList.loadFromDisk();
+                        break;
+                    case 8: // Exits program
                         System.out.println("Exiting program ...");
                         flag = false;
                         break;

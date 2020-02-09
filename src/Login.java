@@ -1,6 +1,7 @@
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintStream;
+
 import java.security.spec.RSAOtherPrimeInfo;
 import java.sql.SQLOutput;
 import java.util.ArrayList;
@@ -9,18 +10,32 @@ import java.util.Scanner;
 public class Login {
     //Fields
     private String userName;
+
     private String passWord;
 
     public Login(String userName, String passWord, ArrayList<Login> list) {
         this.userName = userName;
         this.passWord = passWord;
 
+    private String password;
+
+    public Login(String userName, String password, ArrayList<Login> list) {
+        this.userName = userName;
+        this.password = password;
+
+
         list.add(this);
     }
+
 
     public Login(String userName, String passWord) {
         this.userName = userName;
         this.passWord = passWord;
+
+    public Login(String userName, String password) {
+        this.userName = userName;
+        this.password = password;
+
     }
 
     public String getUserName() {
@@ -33,6 +48,7 @@ public class Login {
         this.userName = userName;
     }
 
+
     public String getPassWord() {
 
         return passWord;
@@ -41,12 +57,21 @@ public class Login {
     public void setPassWord(String passWord) {
 
         this.passWord = passWord;
+
+    public String getPassword() {
+
+        return password;
+    }
+
+    public void setPassword(String password) {
+
+        this.password = password;
+
     }
 
     public static void loginAccess() {
         Scanner console = new Scanner(System.in);
-        System.out.println("Do you have a login for GroceryList?");
-        System.out.println("1 - I do have a login \n+" +
+        System.out.println("Do you have a login for GroceryList? \n+");
                 "2 - I would like to register");
         int loginInput = console.nextInt();
         switch (loginInput) {
@@ -64,7 +89,8 @@ public class Login {
 
     public void toFile() throws FileNotFoundException {
         PrintStream output = new PrintStream(new File("Login.txt"));
-        output.println(userName + " " + passWord);
+        output.println(userName + " " + password);
+
     }
 
     public void registerLogin(ArrayList<Login> test) {
@@ -73,7 +99,10 @@ public class Login {
     }
 
 
-    public static void loginCheck(ArrayList<Login> list, ArrayList<ItemOrder> listO, GroceryList2 listG) {
+
+    public static void loginCheck(ArrayList<Login> list, GroceryList2 listG) throws FileNotFoundException {
+        boolean flag = true;
+        while (flag) {
 
             System.out.println("Welcome to GroceryList");
             Scanner console = new Scanner(System.in);
@@ -90,6 +119,14 @@ public class Login {
             }
             System.out.println("Username or password incorrect \nPleease try again! \n");
 
+                if (list.get(i).getUserName().equals(userNameC) && list.get(i).getPassword().equals(passWordC)) {
+                    System.out.println("Login approved");
+                    GroceryExercise.menuSelectionAL(listG);
+                }
+            }
+            System.out.println("Username or password incorrect \nPlease try again! \n");
+
+        }
 
 
     }
@@ -110,6 +147,3 @@ public class Login {
         return list;
     }
 }
-
-
-
